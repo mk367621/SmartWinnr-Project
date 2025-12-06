@@ -1,4 +1,6 @@
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET;
 
 export const generateToken = (user) => {
@@ -9,7 +11,7 @@ export const generateToken = (user) => {
       email: user.email,
     },
     JWT_SECRET,
-    { expiresIn: "7d" }
+    { expiresIn: "1d" }
   );
 };
 

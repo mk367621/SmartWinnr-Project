@@ -19,7 +19,7 @@ export const registerController = async (req, res) => {
       name,
       email,
       password: hashed,
-      role: role || "viewer",
+      role: "viewer",
     });
     return res.status(201).json({
       message: "user created successfully...",

@@ -2,16 +2,18 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-
+import { userRoute } from "../routes/userRoutes.js";
+import { adminRoute } from "../routes/adminRoutes.js";
+import { orderRoute } from "../routes/orderRoutes.js";
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.json("API running successfully...");
-});
+app.use("/api/user", userRoute);
+app.use("/api/admin", adminRoute);
+app.use("/api/orders", orderRoute);
 
 mongoose
   .connect(process.env.MONGO_URL)
