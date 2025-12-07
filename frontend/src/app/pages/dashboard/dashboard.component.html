@@ -1,0 +1,26 @@
+<div class="dashboard-container">
+  <h1 class="title">HELLO DASHBOARD</h1>
+  <p class="subtitle">You are now logged in.</p>
+
+  <p style="color: yellow">DEBUG: {{ totalUsers }} | {{ totalOrders }} | {{ totalSales }}</p>
+
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <h3>Total Users</h3>
+      <p class="metric-value">{{ totalUsers }}</p>
+      <p class="metric-label">Registered users</p>
+    </div>
+
+    <div class="metric-card">
+      <h3>Total Orders</h3>
+      <p class="metric-value">{{ totalOrders }}</p>
+      <p class="metric-label">Orders placed</p>
+    </div>
+
+    <div class="metric-card">
+      <h3>Total Sales</h3>
+      <p class="metric-value">${{ totalSales }}</p>
+      <p class="metric-label">Overall revenue</p>
+    </div>
+  </div>
+</div>

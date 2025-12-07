@@ -1,0 +1,138 @@
+/* You can add global styles to this file, and also import other style files */
+/* src/styles.css - Modern Dark Blue Dashboard theme */
+
+/* Colors */
+:root {
+  --bg-main: #0f172a;
+  --card-bg: #111827;
+  --card-elev: #1e293b;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --link-blue: #60a5fa;
+  --text-heading: #e2e8f0;
+  --text-normal: #94a3b8;
+  --input-text: #cbd5e1;
+  --input-placeholder: #64748b;
+  --border: #334155;
+  --shadow: rgba(0, 0, 0, 0.35);
+  --radius: 12px;
+}
+
+/* Page */
+body {
+  margin: 0;
+  font-family: Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg-main);
+  color: var(--text-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Card */
+.card {
+  background: var(--card-elev);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 8px 24px var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: var(--text-normal);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-heading);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: linear-gradient(180deg, var(--primary), var(--primary-hover));
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-normal);
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--input-text);
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+.input::placeholder {
+  color: var(--input-placeholder);
+}
+
+/* Utility layout */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+/* Login/Signup specific */
+.auth-grid {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.auth-card {
+  width: 48%;
+}
+@media (max-width: 900px) {
+  .auth-grid {
+    flex-direction: column;
+  }
+  .auth-card {
+    width: 100%;
+  }
+}
+
+/* Navbar + sidebar quick styles */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 220px;
+  background: #0b1220;
+  border-right: 1px solid rgba(255, 255, 255, 0.02);
+  padding: 18px;
+  box-sizing: border-box;
+}
+.main-content {
+  flex: 1;
+  padding: 28px;
+}
+.navbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  background: transparent;
+}
+.nav-link {
+  color: var(--text-normal);
+  text-decoration: none;
+  margin-right: 10px;
+}

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card auth-card">
+    <h2>Sign Up</h2>
+
+    <input class="input" placeholder="Full Name" [(ngModel)]="name" />
+    <input class="input" placeholder="Email" [(ngModel)]="email" />
+    <input class="input" placeholder="Password" type="password" [(ngModel)]="password" />
+
+    <button class="btn" (click)="signup()">Sign Up</button>
+
+    <p style="margin-top: 12px; color: var(--text-normal)">
+      Already have an account?
+      <a class="link" routerLink="/login">Login</a>
+    </p>
+  </div>
+</div>

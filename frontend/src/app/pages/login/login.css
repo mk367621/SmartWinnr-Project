@@ -1,0 +1,39 @@
+/* Center the login card on the page */
+.container {
+  min-height: 100vh; /* full page height */
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+}
+
+/* Login card sizing */
+.auth-card {
+  width: 380px; /* perfect professional width */
+  padding: 32px;
+  border-radius: var(--radius);
+}
+
+/* Adjust the heading spacing */
+.auth-card h2 {
+  margin-bottom: 20px;
+  color: var(--text-heading);
+}
+
+/* Space between inputs and button */
+.input {
+  margin-bottom: 16px;
+}
+
+.btn {
+  width: 100%; /* full-width button */
+  margin-top: 10px;
+}
+
+.link {
+  color: var(--link-blue);
+  cursor: pointer;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
