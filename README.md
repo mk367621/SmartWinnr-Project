@@ -26,7 +26,7 @@
 
         npm install
 
-# 3. Create a .env file:
+# 3. Copy .env to .env.example file:
 
         PORT=3000
         MONGO_URI=<your-mongodb-atlas-connection-string>
