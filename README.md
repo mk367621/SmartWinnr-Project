@@ -26,7 +26,7 @@
 
         npm install
 
-# 3. Copy .env to .env.example file:
+# 3. Create a .env file:
 
         PORT=3000
         MONGO_URI=<your-mongodb-atlas-connection-string>
@@ -49,6 +49,12 @@
 # 6. Backend will run at:
 
         http://localhost:3000
+
+## Frontend used:
+
+        Angular CLI       : 21.0.2
+        Node.js           : 22.14.0
+        Package Manager   : npm 11.6.2
 
 ## Frontend setup instructions-
 
