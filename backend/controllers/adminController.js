@@ -35,7 +35,7 @@ export const getTotalOrders = async (req, res) => {
 
 export const getAllUsers = async (req, res) => {
   try {
-    const users = await userModel.find({}, { password: 0 }); // remove password
+    const users = await userModel.find({}, { password: 0 });
 
     return res.status(200).json({
       message: "Users fetched successfully",
@@ -46,5 +46,19 @@ export const getAllUsers = async (req, res) => {
       message: "Failed to fetch users",
       error: error.message,
     });
+  }
+};
+
+export const getAllOrders = async (req, res) => {
+  try {
+    const orders = await orderModel.find().populate("user", "email name");
+
+    res.json({
+      success: true,
+      orders,
+    });
+  } catch (err) {
+    console.error("GET ORDERS ERROR:", err);
+    res.status(500).json({ success: false, message: "Server error" });
   }
 };

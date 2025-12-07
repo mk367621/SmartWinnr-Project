@@ -6,6 +6,7 @@ import { AuthGuard } from './services/auth.guard';
 import { SalesComponent } from './pages/sales/sales.component';
 import { UsersComponent } from './pages/users/users.component';
 import { LayoutComponent } from './layout/layout.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,7 +19,7 @@ export const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'users', component: UsersComponent },
       { path: 'sales', component: SalesComponent },
-
+      { path: 'orders', component: OrdersComponent },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     ],
   },

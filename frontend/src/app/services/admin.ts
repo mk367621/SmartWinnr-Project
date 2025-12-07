@@ -25,4 +25,7 @@ export class AdminService {
   getAllUsers() {
     return this.http.get(`${this.API_URL}/getAllUsers`, this.getAuthHeaders());
   }
+  getAllOrders(): Observable<any> {
+    return this.http.get(`${this.API_URL}/getAllOrders`, this.getAuthHeaders());
+  }
 }

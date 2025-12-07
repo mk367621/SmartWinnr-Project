@@ -1,0 +1,20 @@
+h1 {
+  margin: 20px 0;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #112233;
+  color: white;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orders-table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}

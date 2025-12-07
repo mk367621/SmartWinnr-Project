@@ -3,6 +3,7 @@ import {
   getTotalUsers,
   getTotalOrders,
   getAllUsers,
+  getAllOrders,
 } from "../controllers/adminController.js";
 import authMiddleware from "../middlewares/authMiddleware.js";
 import { adminMiddleware } from "../middlewares/adminMiddleware.js";
@@ -27,3 +28,5 @@ adminRoute.get(
 adminRoute.get("/metrics", authMiddleware, adminMiddleware, getAdminMetrics);
 
 adminRoute.get("/getAllUsers", authMiddleware, adminMiddleware, getAllUsers);
+
+adminRoute.get("/getAllOrders", authMiddleware, adminMiddleware, getAllOrders);
